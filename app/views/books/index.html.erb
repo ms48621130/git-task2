@@ -1,0 +1,87 @@
+<body>
+  <p id="notice"></p>
+  <h1>Books</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>トラブル知らずのシステム設計</td>
+        <td>システム設計の要点を図解で説明してくれます</td>
+        <td>
+          <a class="show_106091" href="/books/106091">Show</a>
+        </td>
+        <td>
+          <a class="edit_106091" href="/books/106091/edit">Edit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>たのしいRuby</td>
+        <td>Rubyの入門におすすめです</td>
+        <td>
+          <a class="show_106092" href="/books/106092">Show</a>
+        </td>
+        <td>
+          <a class="edit_106092" href="/books/106092/edit">Edit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>入門Git</td>
+        <td>gitについての基本操作から内部構造まで解説してくれます</td>
+        <td>
+          <a class="show_106093" href="/books/106093">Show</a>
+        </td>
+        <td>
+          <a class="edit_106093" href="/books/106093/edit">Edit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>アルゴリズム図鑑</td>
+        <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
+        <td>
+          <a class="show_106114" href="/books/106114">Show</a>
+        </td>
+        <td>
+          <a class="edit_106114" href="/books/106114/edit">Edit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>達人プログラマー</td>
+        <td>プログラマ入門者は必読！</td>
+        <td>
+          <a class="show_106115" href="/books/106115">Show</a>
+        </td>
+        <td>
+          <a class="edit_106115" href="/books/106115/edit">Edit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>データベース実践入門</td>
+        <td>効率的なSQL教えてくれます</td>
+        <td>
+          <a class="show_106129" href="/books/106129">Show</a>
+        </td>
+         <td>
+           <a class="edit_106129" href="/books/106129/edit">Edit</a>
+         </td>
+    </tbody>
+  </table>
+
+<h2>New book</h2>
+<%= form_with model: @book do |f| %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+	
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+	
+  <%= f.submit 'Create Book' %>
+<% end %>
+
+</body>
+

@@ -19,6 +19,9 @@
         <td>
           <a class="edit_106091" href="/books/106091/edit">Edit</a>
         </td>
+        <td>
+          <a data-confirm="Are you sure?" class="destroy_106091" rel="nofollow" data-method="delete" href="/books/106091">Destroy</a>
+        </td>
       </tr>
       <tr>
         <td>たのしいRuby</td>
@@ -29,6 +32,9 @@
         <td>
           <a class="edit_106092" href="/books/106092/edit">Edit</a>
         </td>
+        <td>
+          <a data-confirm="Are you sure?" class="destroy_106092" rel="nofollow" data-method="delete" href="/books/106092">Destroy</a>
+        </td>
       </tr>
       <tr>
         <td>入門Git</td>
@@ -38,6 +44,9 @@
         </td>
         <td>
           <a class="edit_106093" href="/books/106093/edit">Edit</a>
+        </td>
+        <td>
+          <%= link_to "Destroy", book_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
         </td>
       </tr>
       <tr>

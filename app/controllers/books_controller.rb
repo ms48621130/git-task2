@@ -13,23 +13,26 @@ class BooksController < ApplicationController
   end
   
   def create
-    book=Book.new(book_params)
-    if book.save
-     redirect_to '/books'
+    
+    @book=Book.new(book_params)
+    if @book.save
+     flash[:notice] = "投稿が成功しました"
+     redirect_to book_path(@book.id)
     else
-      render :new
+     @books = Book.all
+     render :index
     end
   end
     
   def update
     @book = Book.find(params[:id])
-    book.update(book_params)
-    redirect_to '/books/:id'
+    @book.update(book_params)
+    redirect_to book_path(@book.id) 
   end  
   
   def destroy
-    book = Book.find(params[:id])
-    book.destroy
+    @book = Book.find(params[:id])
+    @book.destroy
     redirect_to '/books'
   end
   
